@@ -36,6 +36,7 @@ class Benchmark
 
     static void Measure(string data, string pattern)
     {
+        try {
         Stopwatch stopwatch = Stopwatch.StartNew();
 
         var r = new Regex(pattern);
@@ -45,5 +46,8 @@ class Benchmark
         stopwatch.Stop();
 
         Console.WriteLine(stopwatch.Elapsed.TotalMilliseconds.ToString("G", System.Globalization.CultureInfo.InvariantCulture) + " - " + count);
+        } catch (Exception e) {
+            
+        }
     }
 }

@@ -28,8 +28,6 @@ fun main(args: Array<String>) {
     match(data, "\\s[a-zA-Z]{0,12}ing\\s");
     match(data, "([A-Za-z]awyer|[A-Za-z]inn)\\s");
     match(data, "[\"'][^\"']{0,30}[?!\\.][\"']");
-    match(data, "\\u221E|\\u2713");
-    match(data, "\\p{Sm}");
 }
 
 fun match(data: String, pattern: String) {

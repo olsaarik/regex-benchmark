@@ -56,6 +56,4 @@ func main() {
     measure(data, "\\s[a-zA-Z]{0,12}ing\\s");
     measure(data, "([A-Za-z]awyer|[A-Za-z]inn)\\s");
     measure(data, "[\"'][^\"']{0,30}[?!\\.][\"']");
-    measure(data, "\\u221E|\\u2713");
-    measure(data, "\\p{Sm}");
 }

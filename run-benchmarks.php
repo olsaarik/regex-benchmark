@@ -1,6 +1,6 @@
 <?php
 
-const PATTERNS_COUNT = 3;
+const PATTERNS_COUNT = 17;
 
 const RUN_TIMES = 10;
 

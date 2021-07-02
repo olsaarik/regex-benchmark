@@ -12,6 +12,7 @@ const BUILDS = [
 #    'C# Mono'      => 'mcs csharp/Benchmark.cs -out:csharp/bin-mono/benchmark.exe -debug- -optimize',
     'C# .Net Core' => 'dotnet build csharp/benchmark.csproj -c Release',
     'SRM'          => 'dotnet build srm/benchmark.csproj -c Release',
+    'SRM Old'          => 'dotnet build srm_old/benchmark.csproj -c Release',
 #    'D dmd'        => 'dmd -O -release -inline -of=d/bin/benchmark d/benchmark.d',
     'D ldc'        => 'ldc2 -O3 -release -of=d/bin/benchmark-ldc d/benchmark.d',
 #    'Dart Native'  => 'mkdir -p /var/regex/dart/bin && dart2native dart/benchmark.dart -o dart/bin/benchmark',
@@ -31,6 +32,7 @@ const COMMANDS = [
 #    'C# Mono'      => 'mono -O=all csharp/bin-mono/benchmark.exe',
     'C# .Net Core' => 'dotnet csharp/bin/Release/net5.0/benchmark.dll',
     'SRM'          => 'dotnet srm/bin/Release/net5.0/benchmark.dll',
+    'SRM Old'          => 'dotnet srm_old/bin/Release/net5.0/benchmark.dll',
 #    'D dmd'        => 'd/bin/benchmark',
     'D ldc'        => 'd/bin/benchmark-ldc',
 #    'Dart'         => 'dart dart/benchmark.dart',  # No case insensitive groups

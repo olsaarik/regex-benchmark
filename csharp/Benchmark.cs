@@ -30,7 +30,7 @@ class Benchmark
         Benchmark.Measure(data, @"[a-zA-Z]+ing");
         Benchmark.Measure(data, @"\s[a-zA-Z]{0,12}ing\s");
         Benchmark.Measure(data, @"([A-Za-z]awyer|[A-Za-z]inn)\s");
-        Benchmark.Measure(data, @"[""'][^""']{0,30}[?!\.][\""']");
+        Benchmark.Measure(data, @"[""'][^""']{0,30}[?!\.][""']");
         Benchmark.Measure(data, @"\u221E|\u2713");
         Benchmark.Measure(data, @"\p{Sm}");
     }

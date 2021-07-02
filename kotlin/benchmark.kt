@@ -27,7 +27,7 @@ fun main(args: Array<String>) {
     match(data, "[a-zA-Z]+ing");
     match(data, "\\s[a-zA-Z]{0,12}ing\\s");
     match(data, "([A-Za-z]awyer|[A-Za-z]inn)\\s");
-    match(data, "[\"'][^\"']{0,30}[?!\\.][\\\"']");
+    match(data, "[\"'][^\"']{0,30}[?!\\.][\"']");
     match(data, "\\u221E|\\u2713");
     match(data, "\\p{Sm}");
 }

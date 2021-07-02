@@ -47,7 +47,7 @@ class Benchmark
 
         Console.WriteLine(stopwatch.Elapsed.TotalMilliseconds.ToString("G", System.Globalization.CultureInfo.InvariantCulture) + " - " + count);
         } catch (Exception e) {
-            
+            Console.WriteLine("0 - 0");
         }
     }
 }

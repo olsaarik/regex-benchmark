@@ -14,18 +14,18 @@ end
 
 data = open(f->read(f, String), ARGS[1])
 
-measure(data, "Twain");
-measure(data, "(?i)Twain");
-measure(data, "[a-z]shing");
-measure(data, "Huck[a-zA-Z]+|Saw[a-zA-Z]+");
-measure(data, "\\b\\w+nn\\b");
-measure(data, "[a-q][^u-z]{13}x");
-measure(data, "Tom|Sawyer|Huckleberry|Finn");
-measure(data, "(?i)Tom|Sawyer|Huckleberry|Finn");
-measure(data, ".{0,2}(Tom|Sawyer|Huckleberry|Finn)");
-measure(data, ".{2,4}(Tom|Sawyer|Huckleberry|Finn)");
-measure(data, "Tom.{10,25}river|river.{10,25}Tom");
-measure(data, "[a-zA-Z]+ing");
-measure(data, "\\s[a-zA-Z]{0,12}ing\\s");
-measure(data, "([A-Za-z]awyer|[A-Za-z]inn)\\s");
-measure(data, "[\"'][^\"']{0,30}[?!\\.][\"']");
+measure(data, r"Twain");
+measure(data, r"(?i)Twain");
+measure(data, r"[a-z]shing");
+measure(data, r"Huck[a-zA-Z]+|Saw[a-zA-Z]+");
+measure(data, r"\b\w+nn\b");
+measure(data, r"[a-q][^u-z]{13}x");
+measure(data, r"Tom|Sawyer|Huckleberry|Finn");
+measure(data, r"(?i)Tom|Sawyer|Huckleberry|Finn");
+measure(data, r".{0,2}(Tom|Sawyer|Huckleberry|Finn)");
+measure(data, r".{2,4}(Tom|Sawyer|Huckleberry|Finn)");
+measure(data, r"Tom.{10,25}river|river.{10,25}Tom");
+measure(data, r"[a-zA-Z]+ing");
+measure(data, r"\s[a-zA-Z]{0,12}ing\s");
+measure(data, r"([A-Za-z]awyer|[A-Za-z]inn)\s");
+measure(data, r"[\"'][^\"']{0,30}[?!\\.][\"']");

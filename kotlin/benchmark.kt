@@ -13,23 +13,23 @@ fun main(args: Array<String>) {
     val inputStream: InputStream = File(args[0]).inputStream()
     val data = inputStream.bufferedReader().use { it.readText() }
 
-    measure(data, "Twain");
-    measure(data, "(?i)Twain");
-    measure(data, "[a-z]shing");
-    measure(data, "Huck[a-zA-Z]+|Saw[a-zA-Z]+");
-    measure(data, "\\b\\w+nn\\b");
-    measure(data, "[a-q][^u-z]{13}x");
-    measure(data, "Tom|Sawyer|Huckleberry|Finn");
-    measure(data, "(?i)Tom|Sawyer|Huckleberry|Finn");
-    measure(data, ".{0,2}(Tom|Sawyer|Huckleberry|Finn)");
-    measure(data, ".{2,4}(Tom|Sawyer|Huckleberry|Finn)");
-    measure(data, "Tom.{10,25}river|river.{10,25}Tom");
-    measure(data, "[a-zA-Z]+ing");
-    measure(data, "\\s[a-zA-Z]{0,12}ing\\s");
-    measure(data, "([A-Za-z]awyer|[A-Za-z]inn)\\s");
-    measure(data, "[\"'][^\"']{0,30}[?!\\.][\\\"']");
-    measure(data, "\\u221E|\\u2713");
-    measure(data, "\\p{Sm}");
+    match(data, "Twain");
+    match(data, "(?i)Twain");
+    match(data, "[a-z]shing");
+    match(data, "Huck[a-zA-Z]+|Saw[a-zA-Z]+");
+    match(data, "\\b\\w+nn\\b");
+    match(data, "[a-q][^u-z]{13}x");
+    match(data, "Tom|Sawyer|Huckleberry|Finn");
+    match(data, "(?i)Tom|Sawyer|Huckleberry|Finn");
+    match(data, ".{0,2}(Tom|Sawyer|Huckleberry|Finn)");
+    match(data, ".{2,4}(Tom|Sawyer|Huckleberry|Finn)");
+    match(data, "Tom.{10,25}river|river.{10,25}Tom");
+    match(data, "[a-zA-Z]+ing");
+    match(data, "\\s[a-zA-Z]{0,12}ing\\s");
+    match(data, "([A-Za-z]awyer|[A-Za-z]inn)\\s");
+    match(data, "[\"'][^\"']{0,30}[?!\\.][\\\"']");
+    match(data, "\\u221E|\\u2713");
+    match(data, "\\p{Sm}");
 }
 
 fun match(data: String, pattern: String) {

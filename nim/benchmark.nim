@@ -15,25 +15,20 @@ proc measure(data:string, pattern:string) =
   let elapsed_time = cpuTime() - time 
   echo &"{elapsed_time * 1e3} - {count}"
 
-let data = readFile(paramStr(2))
-let fake = paramStr(1)
-if fake == "Not happening":
-  let add = "A"
-else:
-  let add = ""
+let data = readFile(paramStr(1))
 
-measure(data, "Twain" & add);
-measure(data, "(?i)Twain" & add);
-measure(data, "[a-z]shing" & add);
-measure(data, "Huck[a-zA-Z]+|Saw[a-zA-Z]+" & add);
-measure(data, "\\b\\w+nn\\b" & add);
-measure(data, "[a-q][^u-z]{13}x" & add);
-measure(data, "Tom|Sawyer|Huckleberry|Finn" & add);
-measure(data, "(?i)Tom|Sawyer|Huckleberry|Finn" & add);
-measure(data, ".{0,2}(Tom|Sawyer|Huckleberry|Finn)" & add);
-measure(data, ".{2,4}(Tom|Sawyer|Huckleberry|Finn)" & add);
-measure(data, "Tom.{10,25}river|river.{10,25}Tom" & add);
-measure(data, "[a-zA-Z]+ing" & add);
-measure(data, "\\s[a-zA-Z]{0,12}ing\\s" & add);
-measure(data, "([A-Za-z]awyer|[A-Za-z]inn)\\s" & add);
-measure(data, "[\"'][^\"']{0,30}[?!\\.][\"']" & add);
+measure(data, "Twain");
+measure(data, "(?i)Twain");
+measure(data, "[a-z]shing");
+measure(data, "Huck[a-zA-Z]+|Saw[a-zA-Z]+");
+measure(data, "\\b\\w+nn\\b");
+measure(data, "[a-q][^u-z]{13}x");
+measure(data, "Tom|Sawyer|Huckleberry|Finn");
+measure(data, "(?i)Tom|Sawyer|Huckleberry|Finn");
+measure(data, ".{0,2}(Tom|Sawyer|Huckleberry|Finn)");
+measure(data, ".{2,4}(Tom|Sawyer|Huckleberry|Finn)");
+measure(data, "Tom.{10,25}river|river.{10,25}Tom");
+measure(data, "[a-zA-Z]+ing");
+measure(data, "\\s[a-zA-Z]{0,12}ing\\s");
+measure(data, "([A-Za-z]awyer|[A-Za-z]inn)\\s");
+measure(data, "[\"'][^\"']{0,30}[?!\\.][\"']");

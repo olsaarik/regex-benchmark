@@ -17,19 +17,23 @@ proc measure(data:string, pattern:string) =
 
 let data = readFile(paramStr(2))
 let fake = paramStr(1)
+if fake == "Not happening":
+  let add = "A"
+else:
+  let add = ""
 
-measure(data, "Twain" & fake);
-measure(data, "(?i)Twain" & fake);
-measure(data, "[a-z]shing" & fake);
-measure(data, "Huck[a-zA-Z]+|Saw[a-zA-Z]+" & fake);
-measure(data, "\\b\\w+nn\\b" & fake);
-measure(data, "[a-q][^u-z]{13}x" & fake);
-measure(data, "Tom|Sawyer|Huckleberry|Finn" & fake);
-measure(data, "(?i)Tom|Sawyer|Huckleberry|Finn" & fake);
-measure(data, ".{0,2}(Tom|Sawyer|Huckleberry|Finn)" & fake);
-measure(data, ".{2,4}(Tom|Sawyer|Huckleberry|Finn)" & fake);
-measure(data, "Tom.{10,25}river|river.{10,25}Tom" & fake);
-measure(data, "[a-zA-Z]+ing" & fake);
-measure(data, "\\s[a-zA-Z]{0,12}ing\\s" & fake);
-measure(data, "([A-Za-z]awyer|[A-Za-z]inn)\\s" & fake);
-measure(data, "[\"'][^\"']{0,30}[?!\\.][\"']" & fake);
+measure(data, "Twain" & add);
+measure(data, "(?i)Twain" & add);
+measure(data, "[a-z]shing" & add);
+measure(data, "Huck[a-zA-Z]+|Saw[a-zA-Z]+" & add);
+measure(data, "\\b\\w+nn\\b" & add);
+measure(data, "[a-q][^u-z]{13}x" & add);
+measure(data, "Tom|Sawyer|Huckleberry|Finn" & add);
+measure(data, "(?i)Tom|Sawyer|Huckleberry|Finn" & add);
+measure(data, ".{0,2}(Tom|Sawyer|Huckleberry|Finn)" & add);
+measure(data, ".{2,4}(Tom|Sawyer|Huckleberry|Finn)" & add);
+measure(data, "Tom.{10,25}river|river.{10,25}Tom" & add);
+measure(data, "[a-zA-Z]+ing" & add);
+measure(data, "\\s[a-zA-Z]{0,12}ing\\s" & add);
+measure(data, "([A-Za-z]awyer|[A-Za-z]inn)\\s" & add);
+measure(data, "[\"'][^\"']{0,30}[?!\\.][\"']" & add);
